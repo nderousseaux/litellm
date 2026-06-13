@@ -1,9 +1,10 @@
 model_list:
   - model_name: coder-qwen
     litellm_params:
-      model: openai/coder-qwen
+      model: openai/coder-qwen          # ← nom réel envoyé à l'API
       api_base: os.environ/UNISTRA_URL
       api_key: os.environ/UNISTRA_API_KEY
+      use_chat_completions_api: true    # ← force chat/completions sans changer le nom
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
